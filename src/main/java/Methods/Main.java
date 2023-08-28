@@ -3,13 +3,15 @@ package Methods;
 public class Main {
     public static void main(String[] args) {
         int a = 22;
-        int b = 2;
+        int b = 33;
 
         int sum = a + b;
         int difference = a - b;
         int product = a * b;
         int iloraz = a / b;
         int modulo = a % b;
+        double msa = 3/4;
+        System.out.println("msa" + msa);
 
         System.out.println("\n" + "Suma: " + sum);
         System.out.println("Różnica: " + difference);
