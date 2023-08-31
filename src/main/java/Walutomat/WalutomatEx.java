@@ -15,7 +15,7 @@ public class WalutomatEx extends Calculator {
             calculator.kwotaPoProwizji(waluta1);
             calculator.kwotaPoKursie(kurs);
             calculator.kwotaPierwsza(waluta1);
-            System.out.println("Kwota jaką otrzymałeś po przewalutowaniu to: " +calculator.getBalance() + "pln");
+            System.out.println("Kwota jaką otrzymałeś po przewalutowaniu to: " +calculator.getBalance() + " pln");
             System.out.println("Kurs za jaki musisz minimalnie  przelać otrzymaną kwotę aby wyjść na 0 to: " + calculator.getKursPotrzebnyDoZostaniaNa0());
             System.out.println("Kursy korzystniejsze i odpowiednia do nich kwota jaką będziesz do przodu:");
             calculator.getBetterKurs(waluta1);

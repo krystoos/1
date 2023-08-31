@@ -1,4 +1,5 @@
 package Walutomat;
+import java.text.DecimalFormat;
 public class Calculator {
     float prowizja = 0.998F;
     float waluta;
@@ -29,8 +30,9 @@ public class Calculator {
         public float getBetterKurs(float waluta1) {
             for (int i = 0; i < 5; i++) {
                 this.kurs2 -= 0.001;
-                System.out.println("Pomniejszony kurs: " + (this.kurs2) + "\n" + "Otrzymana kwota: " +
-                                                           this.poKursie/this.kurs2*prowizja + "nok"  );
+                System.out.println("Korzystniejszy kurs: " + (this.kurs2) + "\n" +  " " + "Otrzymana kwota: " +
+                        this.poKursie/this.kurs2*prowizja + "nok" + "\n" + " " + " " +
+                        "Jesteś na plusie: " + ((this.poKursie/this.kurs2*prowizja) - waluta1) + "pln" );
             }
             return waluta1;
         }
