@@ -45,38 +45,31 @@ public class Olx extends Cars {
             System.out.println("Wpisz cenę maksymalną:");
             int MaxCena = scanner.nextInt();
             System.out.println("Wpisz rodzaj paliwa:" + "\n" + "(benzin/diesel)");
-            String Paliwko = scanner.nextLine();
-            if (brandIndex == 1&& AUDI.equals(Paliwko)) {
-                List<Cars> list = AUDI.stream().filter(Cars -> Cars.price < MaxCena)
-                        .filter(Cars -> Cars.price > MinCena).filter(Cars -> Cars.paliwo.equals("diesel"))
-                        .collect(Collectors.toList());
+            String Paliwko = scanner.next();
+            System.out.println("Wpisz minimalną moc pojazdu:");
+            int MinHP= scanner.nextInt();
+            if(brandIndex==1){
+            List<Cars> list = AUDI.stream()
+                    .filter(car -> car.getPrice() < MaxCena)
+                    .filter(car -> car.getPrice() > MinCena)
+                    .filter(car -> car.getPaliwo().equalsIgnoreCase(Paliwko))
+                    .filter(cars -> cars.getHP()>MinHP)// Ignorowanie wielkości liter
+                    .collect(Collectors.toList());
                 for (Cars car : list) {
                     System.out.println(car);
                 }
-            } else if (brandIndex == 1 && AUDI.equals(Paliwko)){
-                List<Cars> list = AUDI.stream().filter(Cars -> Cars.price < MaxCena)
-                        .filter(Cars -> Cars.price > MinCena).filter(Cars -> Cars.paliwo.equals("benzin"))
-                        .collect(Collectors.toList());
-                for (Cars car : list) {
+            } else{
+        List<Cars> list1 = BMW.stream()
+                .filter(car -> car.getPrice() < MaxCena)
+                .filter(car -> car.getPrice() > MinCena)
+                .filter(car -> car.getPaliwo().equalsIgnoreCase(Paliwko))
+                .filter(cars -> cars.getHP()>MinHP)// Ignorowanie wielkości liter
+                .collect(Collectors.toList());
+                for (Cars car : list1) {
                     System.out.println(car);
                 }
-            } if (brandIndex == 2 && BMW.equals(Paliwko)){
-                    List<Cars> list1 = BMW.stream().filter(Cars -> Cars.price < MaxCena)
-                            .filter(Cars -> Cars.price > MinCena).filter(Cars -> Cars.paliwo.equals("diesel"))
-                            .collect(Collectors.toList());
-                    for (Cars car : list1) {
-                        System.out.println(car);
-                    }
-            }else if (brandIndex == 2 && BMW.equals(Paliwko)){
-
-                    List<Cars> list1 = BMW.stream().filter(Cars -> Cars.price < MaxCena)
-                            .filter(Cars -> Cars.price > MinCena).filter(Cars -> Cars.paliwo.equals("benzin"))
-                            .collect(Collectors.toList());
-                    for (Cars car : list1) {
-                        System.out.println(car);
-                    }
             }
-
+            scanner.close();
                 }catch(Exception e ){
 
                 }

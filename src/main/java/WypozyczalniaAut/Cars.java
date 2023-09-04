@@ -30,6 +30,55 @@ public class Cars {
         this.gearbox = gearbox;
         this.steeringWheel = steeringWheel;
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getCarBody() {
+        return carBody;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getKilometers() {
+        return kilometers;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public float getEngine() {
+        return engine;
+    }
+
+    public String getPaliwo() {
+        return paliwo;
+    }
+
+    public int getHP() {
+        return HP;
+    }
+
+    public String getGearbox() {
+        return gearbox;
+    }
+
+    public String getSteeringWheel() {
+        return steeringWheel;
+    }
+
     @Override
     public String toString() {
         return "Cars{" +

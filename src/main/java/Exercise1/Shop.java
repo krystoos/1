@@ -19,17 +19,17 @@ public class Shop {
             int liczbaRat = scanner.nextInt();
             if (liczbaRat <= 12) {
                 double loan = 0.025;
-                MonthlyPayment=cenaTowaru+(cenaTowaru*loan);
+                MonthlyPayment=(cenaTowaru/liczbaRat)+(cenaTowaru*loan);
                 System.out.println("Kredyt jest oprocentowany na: " + loan + " W " + liczbaRat + " ratach");
                 System.out.println("Rata twojego kredytu wynosi: " + MonthlyPayment);
             } else if (liczbaRat > 12 && liczbaRat <= 24) {
                 double loan = 0.05;
-                MonthlyPayment=cenaTowaru+(cenaTowaru*loan);
+                MonthlyPayment=(cenaTowaru/liczbaRat)+(cenaTowaru*loan);
                 System.out.println("Kredyt jest oprocentowany na: " + loan + " W " + liczbaRat + " ratach");
                 System.out.println("Rata twojego kredytu wynosi: " + MonthlyPayment);
             } else if (liczbaRat > 25 && liczbaRat <= 48) {
                 double loan = 0.1;
-                MonthlyPayment=cenaTowaru+(cenaTowaru*loan);
+                MonthlyPayment=(cenaTowaru/liczbaRat)+(cenaTowaru*loan);
                 System.out.println("Kredyt jest oprocentowany na: " + loan + " W " + liczbaRat + " ratach");
                 System.out.println("Rata twojego kredytu wynosi: " + MonthlyPayment);
             } else System.out.println("Niepoprawna liczba");
